@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app="myApp">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	 <head>
+		<meta charset="UTF-8">
+		<title>Bem-vindo</title>
+	 </head>
+
+	 <body class="jumbotron" ng-controller="AgendaController" >
+
+		<h2>Bem-vindo a Agenda em MEAN Stack!</h2>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a class="glyphicon glyphicon-menu-left" href="index.html" aria-hidden="true"></a></li>
+                        <li><a href="home">Agenda</a></li>
+                        <li><a href="contatos">Contatos</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+		<ng-view>
+		<!-- mudará de acordo com a rota -->
+		</ng-view>
+
+		<script src="javascript/angular.js"></script>
+		<script src="javascript/angular-route.js"></script>
+		<script src="javascript/angular-resource.js"></script>
+		<script src="javascript/main.js"></script>
+		<script src="controller/AgendaController.js"></script>
+	 </body>
+</html>

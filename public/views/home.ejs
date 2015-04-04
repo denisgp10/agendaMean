@@ -1,0 +1,44 @@
+   	<div class="panel panel-default">
+  		<div class="panel-heading">Agenda</div>
+	  		<div class="panel-body">
+		  		<table class="table">
+			        <thead>
+			         	<tr>
+				            <th>#id</th>
+				            <th>Nome</th>
+				            <th>Telefone</th>
+				            <th>Operadora</th>
+				          	<th>Deletar</th>
+				          	<th>Atualizar</th>
+			          	</tr>
+			        </thead>
+			        <tbody>
+			          	<tr ng-repeat="agenda in agendas">
+				            <td>{{agenda._id}}</td>
+				            <td>{{agenda.nome}}</td>
+				            <td>{{agenda.telefone}}</td>
+				            <td>{{agenda.operadora}}</td>
+				            <td>
+				            	<button class="btn btn-danger" ng-click="deletaContato(agenda)">Deletar</button>
+				        	</td>
+		                	<td>
+		                		<button class="btn btn-primary" ng-click="editaContato(agenda)">Atualizar</button>
+		                	</td>
+			         	</tr>
+			          <tr>
+			        </tbody>
+		      	</table>
+                <div class="panel-footer">
+                    <form ng-submit="enviaContato()">
+                        <div class="panel-text">
+                            Nome:<input ng-model="agenda.nome" type="name" required="true"/><br>
+                            Telefone:<input ng-model="agenda.telefone" required="true"/><br>
+                            Operadora:<input ng-model="agenda.operadora" required="true"/><br>
+
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+	  		</div>
+		</div>
+	</div>
