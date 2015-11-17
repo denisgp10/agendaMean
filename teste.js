@@ -1,8 +1,8 @@
 var Agenda = require('./models/database.js');
 
 var agenda = new Agenda({
-	nome: 'Isabela',
-	telefone: '87735639',
+	nome: 'denis',
+	telefone: '0000000',
 	operadora: 'Oi'
 });
 
